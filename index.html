@@ -7,6 +7,7 @@
     <title>Library</title>
     <link href="./style.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4e3520915f.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
     </main>
 </head>
 
@@ -27,17 +28,25 @@
                     </li>
 
                 </ul>
-            </div>
-            <button class="btn__menu">
-                <i class ="fas fa-bars"></i>
-            </button>
-            <div class="menu__backdrop">
-                <button class="btn__menu btn__menu--close">
-                    <i class="fas fa-times"></i>
+                <button class="btn__menu" onclick="openMenu()">
+                    <i class="fas fa-bars"></i>
                 </button>
-                <ul>
-                    <li class="menu__list"></li>
-                </ul>
+                <div class="menu__backdrop">
+                    <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="menu__links">
+                        <li class="menu__list">
+                            <a class="menu__link" href="#" onclick="closeMenu()">Home</a>
+                        </li>
+                        <li class="menu__list">
+                            <a class="menu__link" href="#features" onclick="closeMenu()">Books</a>
+                        </li>
+                        <li class="menu__list">
+                            <a class="menu__link no-cursor" onclick="closeMenu()">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <header>
@@ -45,7 +54,7 @@
                 <div class="header__description">
                     <h1>America's Most Awarded Online Library Platform</h1>
                     <h2>Find Your Fream Book With <span class="text-highlight">Library</span></h2>
-                    <button class="btn">Browse Books</button>
+                    <a href="#features"><button class="btn">Browse Books</button></a>
                 </div>
                 <figure class="header__img--wrapper">
                     <img src="./assets/Undraw_Books.svg" alt="">
@@ -347,8 +356,8 @@
                             Explore More <span class="text-highlight">Books</span>
                         </h2>
                         <a href="#features">
-                        <button class="btn">Browse Books</button>
-                    </a>
+                            <button class="btn">Browse Books</button>
+                        </a>
                     </div>
 
                 </div>
