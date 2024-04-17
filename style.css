@@ -218,6 +218,7 @@ button:active {
 
 .highlight__wrapper {
     display: flex;
+    flex-wrap: wrap;
 }
 .highlight {
     padding: 0 24px;
@@ -247,6 +248,7 @@ button:active {
 .highlight__subtle {
     font-size: 20px;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 .row__column {
@@ -334,16 +336,39 @@ footer {
     padding: 0 8px;
 }
 
+/* Small phones, tablets, large smartphones */
+@media (max-width: 550px) {
+.header__description {
+    padding: 0 24px;
+}
+h1 {
+    font-size:40px;
+}
+h2 {
+    font-size:26px;
+}
+button {
+    font-size: 18px;
+}
+.book {
+    width:50%;
+}
+}
+
+
 @media (max-width: 550px) {
     .nav__links {
         display: none;
     }
     .btn__menu {
-        background-color: transparent;
-        font-size: 40px;
-        text-align: center;
-        border:none;
-        color: #7342d6;
         display: block;
+    }
+    .highlight {
+        width: 100%;
+        margin-bottom: 24px;
+        
+    } 
+    .highlight:not(:last-child) {
+        margin-bottom:24px;
     }
 }
